@@ -74,7 +74,20 @@ $(function () {
     'info'        : true,
     'autoWidth'   : false
   })
-})
+});
+
+
+$(document).on("change", "#neracaJenis", function(e) {
+    if ($(this).val() === "pasiva") {
+        $(".aktiva").hide();
+        $(".pasiva").show();
+    } else {
+        $(".aktiva").show();
+        $(".pasiva").hide();
+    }
+});
+
+$("#neracaJenis").val("aktiva").trigger("change");
 </script>
 </body>
 </html>

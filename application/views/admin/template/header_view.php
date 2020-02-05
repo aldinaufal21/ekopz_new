@@ -192,10 +192,14 @@
             <li <?php if(!empty($kas_keluar)) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>admin/kas/kas_keluar"><i class="fa fa-circle-o"></i> Rekapitulasi Kas Keluar</a></li>
           </ul>
         </li>
-        <li <?php if(!empty($setoran)) echo "class='active treeview'"; ?>>
-          <a href="<?php echo base_url(); ?>admin/setoran">
-            <span>Daftar Setoran</span>
+        <li <?php if(!empty($simpanpinjam)) echo "class='active treeview'"; ?>>
+          <a href="<?php echo base_url(); ?>admin/simpanpinjam">
+            <span>Simpan Pinjam</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
           </a>
+
         </li>
         <li class="treeview">
           <a href="#">
@@ -209,15 +213,15 @@
             <li><a href="<?php echo base_url(); ?>admin/cetak_bukti/pengeluaran_kas"><i class="fa fa-circle-o"></i> Pengeluaran Kas</a></li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#">
+        <li <?php if(!empty($neraca)) echo 'class="active treeview"'; ?>>
+          <a href="<?php echo base_url(); ?>admin/neraca">
             <span>Neraca</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>admin/neraca"><i class="fa fa-circle-o"></i> Neraca Lajur</a></li>
+            <li <?php if(!empty($neraca_lajur)) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>admin/neraca/neraca_lajur"><i class="fa fa-circle-o"></i> Neraca Lajur</a></li>
           </ul>
         </li>
         <li class="treeview">

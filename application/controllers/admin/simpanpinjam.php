@@ -11,11 +11,11 @@ class Setoran extends CI_Controller{
 
   function index()
   {
-    $data['nama'] = "Daftar Setoran";
-    $data['setoran'] = TRUE;
+    $data['nama'] = "Simpan Pinjam";
+    $data['simpanpinjam'] = TRUE;
 
     $this->load->view('admin/template/header_view', $data);
-    $this->load->view('admin/setoran/setoran_view');
+    $this->load->view('admin/simpanpinjam/simpanpinjam_view');
     $this->load->view('admin/template/footer_view');
   }
 
