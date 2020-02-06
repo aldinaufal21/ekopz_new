@@ -73,7 +73,21 @@
 						<li class="nav-item"><a href="<?php echo base_url(); ?>about" class="nav-link">About Us</a></li>
 						<li class="nav-item"><a href="<?php echo base_url(); ?>koperasi" class="nav-link">Join Koperasi</a></li>
 						<li class="nav-item"><a href="<?php echo base_url(); ?>contact" class="nav-link">Contact</a></li>
-						<li class="nav-item"><a href="<?php echo base_url(); ?>login" class="nav-link">Login</a></li>
+						<?php
+						if (!isset($_SESSION['id_anggota'])) { ?>
+								<li class="nav-item"><a href="<?php echo base_url(); ?>login" class="nav-link">Login</a></li>
+					  <?php	}
+						else { ?>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="icon-user"></span> <?php echo $_SESSION['nama']; ?></a>
+								<div class="dropdown-menu" aria-labelledby="dropdown04">
+									<a class="dropdown-item" href="<?php echo base_url(); ?>profile/mykoperasi">profile</a>
+									<a class="dropdown-item" href="<?php echo base_url(); ?>profile/mykoperasi">Koperasi ku</a>
+									<a class="dropdown-item" href="<?php echo base_url(); ?>login/logout_user">logout</a>
+								</div>
+							</li>
+						<?php } ?>
+
 					</ul>
 				</div>
 

@@ -1,12 +1,22 @@
 <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form class="login100-form validate-form" method="post" action="<?php echo base_url(); ?>daftar/input_user">
+				<form class="login100-form validate-form" method="post" action="<?php echo base_url(); ?>daftar/input_koperasi">
 					<span class="login100-form-title p-b-59">
-						Daftar
+						Daftar Koperasi
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
-						<span class="label-input100">Nama Lengkap</span>
+						<span class="label-input100">Nama Koperasi</span>
 						<input class="input100" type="text" name="nama" placeholder="Ekopz">
+						<span class="focus-input100"></span>
+					</div>
+          <div class="wrap-input100 validate-input" data-validate="Name is required">
+						<span class="label-input100">Alamat</span>
+            <textarea name="alamat" class="input100" type="text"></textarea>
+						<span class="focus-input100"></span>
+					</div>
+          <div class="wrap-input100 validate-input" data-validate="Name is required">
+						<span class="label-input100">Tahun Berdiri</span>
+						<input class="input100" type="text" name="tahun_berdiri" placeholder="2012">
 						<span class="focus-input100"></span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
@@ -49,7 +59,7 @@
 						</button>
 					</div>
 
-					<a href="<?php echo base_url(); ?>login" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+					<a href="<?php echo base_url(); ?>login/koperasi" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
 						Login
 						<i class="fa fa-long-arrow-right m-l-5"></i>
 					</a>

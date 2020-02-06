@@ -112,7 +112,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="<?php echo base_url(); ?>assets/admin/upload_profile/<?php echo $_SESSION['foto']; ?>" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?php echo $_SESSION['nama_koperasi']; ?></span>
+              <span class="hidden-xs"><?php echo $_SESSION['nama']; ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -120,8 +120,8 @@
                 <img src="<?php echo base_url(); ?>assets/admin/upload_profile/<?php echo $_SESSION['foto']; ?>" class="img-circle" alt="User Image">
 
                 <p>
-                  <?php echo $_SESSION['nama_koperasi']; ?>
-                  <small>Tahun Berdiri : <?php echo $_SESSION['tahun_berdiri']; ?></small>
+                  <?php echo $_SESSION['nama']; ?>
+                  <small>Anggota Koperasi</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -145,7 +145,7 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="<?php echo base_url(); ?>login/logout_koperasi" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="<?php echo base_url(); ?>login/logout_user" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -168,77 +168,16 @@
           <img src="<?php echo base_url(); ?>assets/admin/upload_profile/<?php echo $_SESSION['foto']; ?>" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p><?php echo $_SESSION['nama_koperasi']; ?></p>
+          <p><?php echo $_SESSION['nama']; ?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div> <br>
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MENU</li>
-        <li <?php if(!empty($dashboard)) echo 'class="active treeview"'; ?>>
-          <a href="<?php echo base_url(); ?>admin/dashboard">
-            <span>Dashboard</span>
-          </a>
-        </li>
-        <li <?php if(!empty($kas)) echo 'class="active treeview"'; ?> >
-          <a href="<?php echo base_url(); ?>admin/kas">
-            <span>Buku Kas</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu" data-widget="tree">
-            <li <?php if(!empty($kas_masuk)) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>admin/kas/kas_masuk"><i class="fa fa-circle-o"></i> Rekapitulasi Kas Masuk</a></li>
-            <li <?php if(!empty($kas_keluar)) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>admin/kas/kas_keluar"><i class="fa fa-circle-o"></i> Rekapitulasi Kas Keluar</a></li>
-          </ul>
-        </li>
-        <li <?php if(!empty($setoran)) echo "class='active treeview'"; ?>>
-          <a href="<?php echo base_url(); ?>admin/setoran">
-            <span>Daftar Setoran</span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <span>Cetak Bukti</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li <?php if(!empty($penerimaan_kas)) echo 'class="active"'; ?>><a href="<?php echo base_url(); ?>admin/cetak_bukti/penerimaan_kas"><i class="fa fa-circle-o"></i> Penerimaan Kas</a></li>
-            <li><a href="<?php echo base_url(); ?>admin/cetak_bukti/pengeluaran_kas"><i class="fa fa-circle-o"></i> Pengeluaran Kas</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <span>Neraca</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>admin/neraca"><i class="fa fa-circle-o"></i> Neraca Lajur</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <span>SHU</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>admin/shu"><i class="fa fa-circle-o"></i> Pembagian SHU</a></li>
-          </ul>
-        </li>
-        <li <?php if(!empty($aktiva)) echo 'class="active treeview"'; ?>>
-          <a href="<?php echo base_url(); ?>admin/aktiva">
-            <span>Daftar & Akutansi Aktiva Tetap</span>
-          </a>
-        </li>
-        <li <?php if(!empty($store)) echo 'class="active treeview"'; ?>>
-          <a href="<?php echo base_url(); ?>admin/store">
-            <span>Kelola Barang</span>
+        <li <?php if(!empty($mykoperasi)) echo 'class="active treeview"'; ?>>
+          <a href="<?php echo base_url(); ?>profile/Mykoperasi">
+            <span>Koperasi Saya</span>
           </a>
         </li>
       </ul>

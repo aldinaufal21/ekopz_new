@@ -7,6 +7,8 @@ class Dashboard extends CI_Controller{
   {
     parent::__construct();
     //Codeigniter : Write Less Do More
+    checklogin();
+    $this->load->model('header_model');
   }
 
   function index()
