@@ -44,7 +44,7 @@
 							<div class="dropdown-menu" aria-labelledby="dropdown04">
 								<a class="dropdown-item" href="<?php echo base_url(); ?>Store">Shop</a>
 								<a class="dropdown-item" href="wishlist.html">Wishlist</a>
-								<a class="dropdown-item" href="product-single.html">Single Product</a>
+								<a class="dropdown-item" href="<?php echo base_url(); ?>Store/product_single">Single Product</a>
 								<a class="dropdown-item" href="cart.html">Cart</a>
 								<a class="dropdown-item" href="checkout.html">Checkout</a>
 							</div>

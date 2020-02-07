@@ -21,4 +21,12 @@ class Store extends CI_Controller{
     $this->load->view('landingpage/template/footer_view');
   }
 
+  function product_single()
+  {
+    $data['nama'] = "Product Single";
+    $this->load->view('landingpage/template/header_store_view',$data);
+    $this->load->view('landingpage/store/product_single_view');
+    $this->load->view('landingpage/template/footer_view');
+  }
+
 }
