@@ -1,5 +1,5 @@
 <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form class="login100-form validate-form" method="post" action="<?php echo base_url(); ?>daftar/input_koperasi">
+				<form class="login100-form validate-form" enctype="multipart/form-data" method="post" action="<?php echo base_url(); ?>daftar/input_koperasi">
 					<span class="login100-form-title p-b-59">
 						Daftar Koperasi
 					</span>
@@ -34,6 +34,12 @@
 					<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
 						<span class="label-input100">Repeat Password</span>
 						<input class="input100" type="password" name="repeat_password" placeholder="*************">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
+						<span class="label-input100">Upload Foto Koperasi</span>
+						<input type="file" name="foto">
 						<span class="focus-input100"></span>
 					</div>
 

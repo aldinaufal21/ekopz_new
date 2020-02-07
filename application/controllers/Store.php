@@ -6,15 +6,18 @@ class Store extends CI_Controller{
   public function __construct()
   {
     parent::__construct();
-    //Codeigniter : Write Less Do More
+    $this->load->model('store_model');
   }
 
   function index()
   {
     $data['nama'] = "Home";
     $data['store'] = TRUE;
+
+    $data['barang'] = $this->store_model->tampil_store()->result();
+
     $this->load->view('landingpage/template/header_store_view', $data);
-    $this->load->view('landingpage/store/store_view');
+    $this->load->view('landingpage/store/store_view', $data);
     $this->load->view('landingpage/template/footer_view');
   }
 
