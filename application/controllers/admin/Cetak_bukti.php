@@ -6,7 +6,7 @@ class Cetak_bukti extends CI_Controller{
   public function __construct()
   {
     parent::__construct();
-    chechklogin();
+    checklogin();
   }
 
   function penerimaan_kas()

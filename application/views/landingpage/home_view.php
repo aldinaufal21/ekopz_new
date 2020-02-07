@@ -97,93 +97,29 @@
 			</div>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="product">
-							<a href="#" class="img-prod"><img class="img-fluid" src="<?php echo base_url(); ?>assets/landingpage/images/rizky_abadi.png" alt="Colorlib Template">
-							</a>
-							<div class="text py-3 pb-4 px-3 text-center">
-								<h3><a href="#">Koperasi Rizky Abadi</a></h3>
-								<div class="d-flex">
-									<div class="pricing">
-										<p class="price"><span class="price-sale">DayeuhKolot, Bandung</span></p>
+					<?php foreach ($koperasi as $ekopz) { ?>
+						<div class="col-md-6 col-lg-3 ftco-animate">
+							<div class="product">
+								<a href="#" class="img-prod"><img style="height: 200px; width: 250px;" class="img-fluid" src="<?php echo base_url(); ?>assets/admin/upload_profile/<?php echo $ekopz->foto; ?>" alt="Colorlib Template">
+								</a>
+								<div class="text py-3 pb-4 px-3 text-center">
+									<h3><a href="#"><?php echo $ekopz->nama; ?></a></h3>
+									<div class="d-flex">
+										<div class="pricing">
+											<p class="price"><span class="price-sale"><?php echo $ekopz->alamat; ?></span></p>
+										</div>
 									</div>
-								</div>
-								<div class="bottom-area d-flex px-3">
-									<div class="m-auto d-flex">
-										<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-											<span><i class="ion-ios-home"></i></span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="product">
-							<a href="#" class="img-prod"><img class="img-fluid" src="<?php echo base_url(); ?>assets/landingpage/images/rizky_abadi.png" alt="Colorlib Template">
-								<div class="overlay"></div>
-							</a>
-							<div class="text py-3 pb-4 px-3 text-center">
-								<h3><a href="#">BMT Gakopsyah</a></h3>
-								<div class="d-flex">
-									<div class="pricing">
-										<p class="price"><span>Buah Batu, Bandung</span></p>
-									</div>
-								</div>
-								<div class="bottom-area d-flex px-3">
-									<div class="m-auto d-flex">
-										<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-											<span><i class="ion-ios-home"></i></span>
-										</a>
+									<div class="bottom-area d-flex px-3">
+										<div class="m-auto d-flex">
+											<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+												<span><i class="ion-ios-home"></i></span>
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="product">
-							<a href="#" class="img-prod"><img class="img-fluid" src="<?php echo base_url(); ?>assets/landingpage/images/rizky_abadi.png" alt="Colorlib Template">
-								<div class="overlay"></div>
-							</a>
-							<div class="text py-3 pb-4 px-3 text-center">
-								<h3><a href="#">BMT Gakopsyah</a></h3>
-								<div class="d-flex">
-									<div class="pricing">
-										<p class="price"><span>Buah Batu, Bandung</span></p>
-									</div>
-								</div>
-								<div class="bottom-area d-flex px-3">
-									<div class="m-auto d-flex">
-										<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-											<span><i class="ion-ios-home"></i></span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="product">
-							<a href="#" class="img-prod"><img class="img-fluid" src="<?php echo base_url(); ?>assets/landingpage/images/rizky_abadi.png" alt="Colorlib Template">
-								<div class="overlay"></div>
-							</a>
-							<div class="text py-3 pb-4 px-3 text-center">
-								<h3><a href="#">BMT Gakopsyah</a></h3>
-								<div class="d-flex">
-									<div class="pricing">
-										<p class="price"><span>Buah Batu, Bandung</span></p>
-									</div>
-								</div>
-								<div class="bottom-area d-flex px-3">
-									<div class="m-auto d-flex">
-										<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-											<span><i class="ion-ios-home"></i></span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<?php } ?>
 					<a href="#" style="margin-left: 44%;">Lihat Lebih Lengkap</a>
 				</div>
 			</div>

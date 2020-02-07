@@ -17,7 +17,7 @@
                 </select>
               </div>
 
-              <a href="<?php echo base_url(); ?>admin/store/form_input" class="btn btn-success">+ Tambah Data</a>
+              <a href="<?php echo base_url(); ?>admin/Store/form_input" class="btn btn-success">+ Tambah Data</a>
               <a href="#" class="btn btn-primary"><i class="fa fa-print"> </i> Cetak Data</a>
           </div>
           <!-- /.box-header -->
@@ -52,8 +52,8 @@
                     <td><?php echo $brg->harga_beli; ?></td>
                     <td><?php echo $brg->harga_jual; ?></td>
                     <td>
-                      <a href="<?php echo base_url(); ?>admin/store/form_edit/<?php echo $brg->id_barang; ?>" class="btn btn-warning">Edit</a>
-                      <a href="<?php echo base_url(); ?>admin/store/delete/<?php echo $brg->id_barang; ?>" class="btn btn-danger">Hapus</a>
+                      <a href="<?php echo base_url(); ?>admin/Store/form_edit/<?php echo $brg->id_barang; ?>" class="btn btn-warning">Edit</a>
+                      <a href="<?php echo base_url(); ?>admin/Store/delete/<?php echo $brg->id_barang; ?>" class="btn btn-danger">Hapus</a>
                     </td>
                   </tr>
                 <?php } ?>

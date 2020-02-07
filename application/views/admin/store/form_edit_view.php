@@ -18,7 +18,7 @@
     <div class="box box-primary">
       <!-- /.box-header -->
       <!-- form start -->
-      <form action="<?php echo base_url(); ?>admin/store/update_data/<?php echo $barang->id_barang; ?>" method="post" enctype="multipart/form-data">
+      <form action="<?php echo base_url(); ?>admin/Store/update_data/<?php echo $barang->id_barang; ?>" method="post" enctype="multipart/form-data">
         <div class="box-body">
          <div class="form-group">
             <label>Nama Barang</label>
@@ -66,7 +66,7 @@
 
       <div class="box-footer">
         <input type="submit" class="btn btn-primary" name="tambah" value="TAMBAH">
-        <a href="<?php echo base_url(); ?>admin/store" class="btn btn-primary">KEMBALI</a>
+        <a href="<?php echo base_url(); ?>admin/Store" class="btn btn-primary">KEMBALI</a>
       </div>
     </form>
   </div>

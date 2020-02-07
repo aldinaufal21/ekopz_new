@@ -145,7 +145,7 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="<?php echo base_url(); ?>login/logout_koperasi" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="<?php echo base_url(); ?>Login/logout_koperasi" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -176,24 +176,24 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MENU</li>
         <li <?php if(!empty($dashboard)) echo 'class="active treeview"'; ?>>
-          <a href="<?php echo base_url(); ?>admin/dashboard">
+          <a href="<?php echo base_url(); ?>admin/Dashboard">
             <span>Dashboard</span>
           </a>
         </li>
         <li <?php if(!empty($kas)) echo 'class="active treeview"'; ?> >
-          <a href="<?php echo base_url(); ?>admin/kas">
+          <a href="<?php echo base_url(); ?>admin/Kas">
             <span>Buku Kas</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu" data-widget="tree">
-            <li <?php if(!empty($kas_masuk)) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>admin/kas/kas_masuk"><i class="fa fa-circle-o"></i> Rekapitulasi Kas Masuk</a></li>
-            <li <?php if(!empty($kas_keluar)) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>admin/kas/kas_keluar"><i class="fa fa-circle-o"></i> Rekapitulasi Kas Keluar</a></li>
+            <li <?php if(!empty($kas_masuk)) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>admin/Kas/kas_masuk"><i class="fa fa-circle-o"></i> Rekapitulasi Kas Masuk</a></li>
+            <li <?php if(!empty($kas_keluar)) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>admin/Kas/kas_keluar"><i class="fa fa-circle-o"></i> Rekapitulasi Kas Keluar</a></li>
           </ul>
         </li>
         <li <?php if(!empty($setoran)) echo "class='active treeview'"; ?>>
-          <a href="<?php echo base_url(); ?>admin/setoran">
+          <a href="<?php echo base_url(); ?>admin/Setoran">
             <span>Daftar Setoran</span>
           </a>
         </li>
@@ -205,8 +205,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li <?php if(!empty($penerimaan_kas)) echo 'class="active"'; ?>><a href="<?php echo base_url(); ?>admin/cetak_bukti/penerimaan_kas"><i class="fa fa-circle-o"></i> Penerimaan Kas</a></li>
-            <li><a href="<?php echo base_url(); ?>admin/cetak_bukti/pengeluaran_kas"><i class="fa fa-circle-o"></i> Pengeluaran Kas</a></li>
+            <li <?php if(!empty($penerimaan_kas)) echo 'class="active"'; ?>><a href="<?php echo base_url(); ?>admin/Cetak_bukti/penerimaan_kas"><i class="fa fa-circle-o"></i> Penerimaan Kas</a></li>
+            <li><a href="<?php echo base_url(); ?>admin/Cetak_bukti/pengeluaran_kas"><i class="fa fa-circle-o"></i> Pengeluaran Kas</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -217,7 +217,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>admin/neraca"><i class="fa fa-circle-o"></i> Neraca Lajur</a></li>
+            <li><a href="<?php echo base_url(); ?>admin/Neraca"><i class="fa fa-circle-o"></i> Neraca Lajur</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -228,16 +228,16 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>admin/shu"><i class="fa fa-circle-o"></i> Pembagian SHU</a></li>
+            <li><a href="<?php echo base_url(); ?>admin/Shu"><i class="fa fa-circle-o"></i> Pembagian SHU</a></li>
           </ul>
         </li>
         <li <?php if(!empty($aktiva)) echo 'class="active treeview"'; ?>>
-          <a href="<?php echo base_url(); ?>admin/aktiva">
+          <a href="<?php echo base_url(); ?>admin/Aktiva">
             <span>Daftar & Akutansi Aktiva Tetap</span>
           </a>
         </li>
         <li <?php if(!empty($store)) echo 'class="active treeview"'; ?>>
-          <a href="<?php echo base_url(); ?>admin/store">
+          <a href="<?php echo base_url(); ?>admin/Store">
             <span>Kelola Barang</span>
           </a>
         </li>
