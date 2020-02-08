@@ -14,4 +14,13 @@ class koperasi_model extends CI_Model{
     return $this->db->get('koperasi');
   }
 
+  public function limit_koperasi()
+  {
+      $this->db->select('*');
+      $this->db->from('koperasi');
+      $this->db->limit('4');
+
+      return $this->db->get();
+  }
+
 }

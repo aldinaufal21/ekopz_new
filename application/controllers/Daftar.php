@@ -33,6 +33,8 @@ class Daftar extends CI_Controller{
     $email = $this->input->post('email');
     $password = $this->input->post('password');
     $repeat_password = $this->input->post('repeat_password');
+    $lat = $this->input->post('lat');
+    $long = $this->input->post('long');
 
     $data = array(
       'id_koperasi' => '',
@@ -45,6 +47,8 @@ class Daftar extends CI_Controller{
       'email' => $email,
       'password' => md5($password),
       'rating' => '',
+      'lat' => $lat,
+      'lng' => $long,
     );
 
     if (!empty($_FILES['foto']['name'])) {

@@ -30,19 +30,19 @@
       <?php foreach ($barang as $brg) { ?>
         <div class="col-md-6 col-lg-3 ftco-animate">
           <div class="product">
-            <a href="#" class="img-prod"><img class="img-fluid" style="height: 200px; width: 270px;" src="<?php echo base_url(); ?>assets/admin/upload_barang/<?php echo $brg->foto; ?>" alt="Colorlib Template">
+            <a href="<?php echo base_url(); ?>Store/product_single/<?php echo $brg->id_barang; ?>" class="img-prod"><img class="img-fluid" style="height: 200px; width: 270px;" src="<?php echo base_url(); ?>assets/admin/upload_barang/<?php echo $brg->foto; ?>" alt="Colorlib Template">
               <div class="overlay"></div>
             </a>
             <div class="text py-3 pb-4 px-3 text-center">
               <h3><a href="#"><?php echo $brg->nama_barang; ?></a></h3>
               <div class="d-flex">
                 <div class="pricing">
-                  <p class="price"><span class="price-sale">Rp. <?php echo $brg->harga_jual; ?></span></p>
+                  <p class="price"><span class="price-sale">Rp. <?php echo number_format($brg->harga_jual,0,',','.'); ?></span></p>
                 </div>
               </div>
               <div class="bottom-area d-flex px-3">
                 <div class="m-auto d-flex">
-                  <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                  <a href="<?php echo base_url(); ?>Store/product_single/<?php echo $brg->id_barang; ?>" class="add-to-cart d-flex justify-content-center align-items-center text-center">
                     <span><i class="ion-ios-menu"></i></span>
                   </a>
                   <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">

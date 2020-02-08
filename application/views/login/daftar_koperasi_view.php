@@ -14,6 +14,17 @@
             <textarea name="alamat" class="input100" type="text"></textarea>
 						<span class="focus-input100"></span>
 					</div>
+					<span>koordinat Alamat</span>
+					<div class="wrap-input100 validate-input" data-validate="Name is required">
+						<span class="label-input100">lat</span>
+            <textarea name="lat" class="input100" type="text"></textarea>
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Name is required">
+						<span class="label-input100">long</span>
+            <textarea name="long" class="input100" type="text"></textarea>
+						<span class="focus-input100"></span>
+					</div>
           <div class="wrap-input100 validate-input" data-validate="Name is required">
 						<span class="label-input100">Tahun Berdiri</span>
 						<input class="input100" type="text" name="tahun_berdiri" placeholder="2012">

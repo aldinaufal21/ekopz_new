@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/landingpage/images/logo_ekopz.png"/>
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
@@ -27,11 +29,12 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/landingpage/css/flaticon.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/landingpage/css/icomoon.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/landingpage/css/style.css">
+
   </head>
   <body class="goto-here">
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="<?php echo base_url(); ?>landingpage/Home">Ekopz</a>
+	      <a class="navbar-brand" href="<?php echo base_url(); ?>Home">Ekopz</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -51,7 +54,6 @@
 						</li>
 						<li class="nav-item"><a href="<?php echo base_url(); ?>About" class="nav-link">About Us</a></li>
 						<li class="nav-item"><a href="<?php echo base_url(); ?>Koperasi" class="nav-link">Join Koperasi</a></li>
-						<li class="nav-item"><a href="<?php echo base_url(); ?>Contact" class="nav-link">Contact</a></li>
 	          <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
 	        </ul>

@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/landingpage/images/logo_ekopz.png"/>
+
 	<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
@@ -27,6 +29,14 @@
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/landingpage/css/flaticon.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/landingpage/css/icomoon.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/landingpage/css/style.css">
+
+	<style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
 </head>
 <body class="goto-here">
 		<!-- <div class="py-1 bg-primary">
@@ -72,7 +82,6 @@
 						</li>
 						<li class="nav-item"><a href="<?php echo base_url(); ?>About" class="nav-link">About Us</a></li>
 						<li class="nav-item"><a href="<?php echo base_url(); ?>Koperasi" class="nav-link">Join Koperasi</a></li>
-						<li class="nav-item"><a href="<?php echo base_url(); ?>Contact" class="nav-link">Contact</a></li>
 						<?php
 						if (!isset($_SESSION['id_anggota'])) { ?>
 								<li class="nav-item"><a href="<?php echo base_url(); ?>Login" class="nav-link">Login</a></li>

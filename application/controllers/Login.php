@@ -46,7 +46,7 @@ class Login extends CI_Controller{
         'id_anggota' => $data_anggota['id_anggota'],
       );
       $this->session->set_userdata($data_session);
-      redirect(base_url('profile/mykoperasi'));
+      redirect(base_url('home'));
     }
     else{
       $this->index();
