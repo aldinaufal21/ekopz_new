@@ -38,4 +38,12 @@ class Kas extends CI_Controller{
     $this->load->view('admin/template/footer_view');
   }
 
+  function form_input()
+  {
+    $data['nama'] = "Kas";
+    $data['input'] = TRUE;
+    $this->load->view('admin/template/header_view', $data);
+    $this->load->view('admin/kas/input_view');
+    $this->load->view('admin/template/footer_view');
+  }
 }

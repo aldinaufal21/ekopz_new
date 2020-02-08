@@ -14,8 +14,14 @@ class Neraca extends CI_Controller{
     $data['nama'] = "Neraca";
     $data['neraca'] = TRUE;
 
+    $aktiva = 'aktiva';
+    $data['aktiva'] =  $this->neraca_model->tampil_data_aktiva($aktiva)->result();
+
+    $pasiva = 'pasiva';
+    $data['pasiva'] =  $this->neraca_model->tampil_data_pasiva($pasiva)->result();
+
     $this->load->view('admin/template/header_view', $data);
-    $this->load->view('admin/neraca/neraca_view');
+    $this->load->view('admin/neraca/neraca_view',$data);
     $this->load->view('admin/template/footer_view');
   }
 
@@ -42,6 +48,7 @@ class Neraca extends CI_Controller{
     $ap = $this->input->post('ap');
     $jenis = $this->input->post('jenis');
     $rincian = $this->input->post('rincian');
+    $tahun = $this->input->post('tahun');
     $jumlah = $this->input->post('jumlah');
 
     $data = array(
@@ -50,6 +57,7 @@ class Neraca extends CI_Controller{
       'ap' => $ap,
       'jenis' => $jenis,
       'rincian' => $rincian,
+      'tahun'=> $tahun,
       'jumlah' => $jumlah
     );
 
@@ -57,5 +65,31 @@ class Neraca extends CI_Controller{
 
     $this->index();
   }
+  function edit($id){
+    $edit['nama'] = "Neraca";
+    $edit['edit'] = TRUE;
+    $q=$this->neraca_model->getID($id)->row();
+    $data['neraca']=$q;
+    $this->load->view('admin/template/header_view', $edit);
+    $this->load->view('admin/neraca/edit_view',$data);
+    $this->load->view('admin/template/footer_view');
+  }
 
+  function update($id){
+    $data= $this->input->post();
+    $q = $this->neraca_model->update_neraca($id,$data);
+
+    if ($q) {
+      return $this->index();
+    }
+    echo "Gagal";
+  }
+
+  function delete($id){
+    $q = $this->neraca_model->delete_neraca($id);
+
+    if ($q) {
+      return redirect(base_url('admin/neraca/index'));
+    }
+  }
 }

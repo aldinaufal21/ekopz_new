@@ -79,11 +79,11 @@ $(function () {
 
 $(document).on("change", "#neracaJenis", function(e) {
     if ($(this).val() === "pasiva") {
-        $(".aktiva").hide();
-        $(".pasiva").show();
+        $(".aktiva").removeAttr("name").hide();
+        $(".pasiva").attr("name", "jenis").show();
     } else {
-        $(".aktiva").show();
-        $(".pasiva").hide();
+        $(".aktiva").attr("name", "jenis").show();
+        $(".pasiva").removeAttr("name").hide();
     }
 });
 

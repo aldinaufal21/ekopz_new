@@ -27,7 +27,7 @@
                 </select>
               </div>
 
-              <a href="#" class="btn btn-success">+ Tambah Data</a>
+              <a href="<?php echo base_url(); ?>admin/kas/form_input" class="btn btn-success">+ Tambah Data</a>
               <a href="#" class="btn btn-primary"><i class="fa fa-print"> </i> Cetak Data</a>
           </div>
           <!-- /.box-header -->
@@ -188,6 +188,7 @@
                 <td>500.000</td>
                 <td>285.000</td>
               </tr>
+            
             </table>
           </div>
           <!-- /.box-body -->

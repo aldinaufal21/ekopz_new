@@ -73,7 +73,7 @@
 						<li class="nav-item"><a href="<?php echo base_url(); ?>about" class="nav-link">About Us</a></li>
 						<li class="nav-item"><a href="<?php echo base_url(); ?>koperasi" class="nav-link">Join Koperasi</a></li>
 						<li class="nav-item"><a href="<?php echo base_url(); ?>contact" class="nav-link">Contact</a></li>
-						<li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Login</a></li>
+						<li class="nav-item"><a href="<?php echo base_url(); ?>login" class="nav-link">Login</a></li>
 					</ul>
 				</div>
 

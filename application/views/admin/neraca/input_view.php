@@ -16,8 +16,8 @@
           <div class="form-group">
             <div class="form-group col-md-8">
               <select id="neracaJenis" class="form-control" name="ap">
-                <option value="Aktiva">Aktiva</option>
-                <option value="Pasiva">Pasiva</option>
+                <option value="aktiva">Aktiva</option>
+                <option value="pasiva">Pasiva</option>
               </select>
             </div>
           </div>
@@ -39,6 +39,12 @@
             <div class="form-group col-md-8">
         			<label for="keterangan">Rincian</label>
         			<input type="text" class="form-control" name="rincian" id="rincian" placeholder="Rincian">
+        		</div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-8">
+        			<label for="tahun">Tahun</label>
+        			<input type="text" class="form-control" name="tahun" id="tahun" placeholder="Tahun">
         		</div>
           </div>
           <div class="form-row">
