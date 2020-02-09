@@ -23,4 +23,9 @@ class koperasi_model extends CI_Model{
       return $this->db->get();
   }
 
+  public function maps()
+  {
+    return $this->db->get('koperasi');
+  }
+
 }

@@ -54,7 +54,7 @@
 						</li>
 						<li class="nav-item"><a href="<?php echo base_url(); ?>About" class="nav-link">About Us</a></li>
 						<li class="nav-item"><a href="<?php echo base_url(); ?>Koperasi" class="nav-link">Join Koperasi</a></li>
-	          <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+	          <!-- <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[]</a></li> -->
 
 	        </ul>
 	      </div>

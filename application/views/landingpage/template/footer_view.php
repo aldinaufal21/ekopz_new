@@ -63,18 +63,22 @@
 		// Initialize and add the map
 		function initMap() {
 		  // The location of Uluru
+
 			var locations = [
-					{lat: -6.916737, lng: 107.617748},
-					{lat: -6.716737, lng: 107.517748},
-					{lat: -6.816737, lng: 107.817748}
+				<?php foreach ($maps as $m) { ?>
+					{lat: <?php echo $m->lat; ?>, lng: <?php echo $m->lng; ?>},
+				<?php } ?>
+					// {lat: -6.716737, lng: 107.517748},
+					// {lat: -6.816737, lng: 107.817748}
 			];
+
 		  // The map, centered at Uluru
 		  var mappp = new google.maps.Map(
 		      document.getElementById('map'), {zoom: 10, center: locations[0]});
 		  // The marker, positioned at Uluru
 
 			locations.map(function(item) {
-					marker = new google.maps.Marker({position: item, map: mappp});
+			 		marker = new google.maps.Marker({position: item, map: mappp});
 			});
 		}
     </script>
@@ -94,6 +98,43 @@
 		<script src="<?php echo base_url(); ?>assets/landingpage/js/bootstrap-datepicker.js"></script>
 		<script src="<?php echo base_url(); ?>assets/landingpage/js/scrollax.min.js"></script>
 		<script src="<?php echo base_url(); ?>assets/landingpage/js/main.js"></script>
+
+		<script>
+	 $(document).ready(function(){
+
+		 var quantitiy=0;
+				$('.quantity-right-plus').click(function(e){
+
+						 // Stop acting like a button
+						 e.preventDefault();
+						 // Get the field name
+						 var quantity = parseInt($('#quantity').val());
+
+						 // If is not undefined
+
+								 $('#quantity').val(quantity + 1);
+
+
+								 // Increment
+
+				 });
+
+					$('.quantity-left-minus').click(function(e){
+						 // Stop acting like a button
+						 e.preventDefault();
+						 // Get the field name
+						 var quantity = parseInt($('#quantity').val());
+
+						 // If is not undefined
+
+								 // Increment
+								 if(quantity>0){
+								 $('#quantity').val(quantity - 1);
+								 }
+				 });
+
+		 });
+	 </script>
 
 	</body>
 	</html>

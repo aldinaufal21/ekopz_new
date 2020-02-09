@@ -54,27 +54,42 @@
               </div>
             </div>
 						<div class="row mt-4">
-							<div class="col-md-6">
-								<div class="form-group d-flex">
-		              <div class="select-wrap">
-	                  <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                  <select name="" id="" class="form-control">
-	                  	<option value="">Small</option>
-	                    <option value="">Medium</option>
-	                    <option value="">Large</option>
-	                    <option value="">Extra Large</option>
-	                  </select>
-	                </div>
-		            </div>
-							</div>
+              <?php
+              $kategori = $product->kategori;
+              if ($kategori == "pakaian") { ?>
+                <div class="col-md-6">
+  								<div class="form-group d-flex">
+  		              <div class="select-wrap">
+  	                  <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+  	                  <select name="" id="" class="form-control">
+  	                  	<option value="">Small</option>
+  	                    <option value="">Medium</option>
+  	                    <option value="">Large</option>
+  	                    <option value="">Extra Large</option>
+  	                  </select>
+  	                </div>
+  		            </div>
+  							</div>
+              <?php } ?>
 							<div class="w-100"></div>
               <form action="<?php echo base_url(); ?>Store/cart/<?php echo $product->id_barang; ?>" method="post">
-  							<div class="input-group col-md-6 d-flex mb-3">
-  	             	<input type="text" id="quantity" name="jumlah" class="form-control input-number" value="1" min="1" max="100">
-  	          	</div>
+                <div class="w-100"></div>
+							<div class="input-group col-md-6 d-flex mb-3" style="width: 390px;">
+	             	<span class="input-group-btn mr-2">
+	                	<button type="button" class="quantity-left-minus btn"  data-type="minus" data-field="">
+	                   <i class="ion-ios-remove"></i>
+	                	</button>
+	            		</span>
+	             	<input type="text" id="quantity" name="jumlah" class="form-control input-number" value="1" min="1" max="100">
+	             	<span class="input-group-btn ml-2">
+	                	<button type="button" class="quantity-right-plus btn" data-type="plus" data-field="">
+	                     <i class="ion-ios-add"></i>
+	                 </button>
+	             	</span>
+	          	</div>
   	          	<div class="w-100"></div>
   	          	<div class="col-md-12">
-  	          		<p style="color: #000;"><?php echo $product->stok; ?> kg Tersedia</p>
+  	          		<p style="color: #000;"><?php echo $product->stok; echo "&nbsp"; echo $product->satuan;?>  Tersedia</p>
   	          	</div>
             	</div>
                 <button type="submit" class="btn btn-primary" style="color: black; width: 300px;">Masukkan Ke Keranjang</button>

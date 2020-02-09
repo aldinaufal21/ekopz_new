@@ -26,28 +26,31 @@
 						      </tr>
 						    </thead>
 						    <tbody>
-						      <tr class="text-center">
-						        <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
+                  <?php foreach ($keranjang as $cart) { ?>
+                    <tr class="text-center">
+  						        <td class="product-remove"><a href="<?php echo base_url(); ?>Store/hapus_cart/<?php echo $cart->id_keranjang; ?>"><span class="ion-ios-close"></span></a></td>
 
-						        <td class="image-prod"><div class="img" style="background-image:url(<?php echo base_url(); ?>assets/landingpage/images/product-3.jpg);"></div></td>
+  						        <td class="image-prod"><div class="img" style="background-image:url(<?php echo base_url(); ?>assets/admin/upload_barang/<?php echo $cart->foto_barang; ?>);"></div></td>
 
-						        <td class="product-name">
-						        	<h3>Bell Pepper</h3>
-						        	<p>Far far away, behind the word mountains, far from the countries</p>
-						        </td>
+  						        <td class="product-name">
+  						        	<h3><?php echo $cart->nama; ?></h3>
+  						        	<p><?php echo $cart->kategori; ?></p>
+  						        </td>
 
-						        <td class="price">$4.90</td>
+  						        <td class="price">Rp. <?php echo number_format($cart->harga,0,',','.'); ?></td>
 
-						        <td class="quantity">
-						        	<div class="input-group mb-3">
-					             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-					          	</div>
-					          </td>
+  						        <td class="quantity">
+  						        	<div class="input-group mb-3">
+  					             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+  					          	</div>
+  					          </td>
 
-						        <td class="total">$4.90</td>
-						      </tr><!-- END TR-->
+  						        <td class="total">Rp.<?php echo number_format($cart->total,0,',','.'); ?></td>
+  						      </tr>
+                    <!-- END TR-->
+                  <?php } ?>
 
-						      <tr class="text-center">
+						      <!-- <tr class="text-center">
 						        <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
 
 						        <td class="image-prod"><div class="img" style="background-image:url(<?php echo base_url(); ?>assets/landingpage/images/product-4.jpg);"></div></td>

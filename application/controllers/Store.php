@@ -39,21 +39,34 @@ class Store extends CI_Controller{
   {
     userlogin();
     $data['nama'] = "Keranjang";
-    // $id_anggota = $_SESSION['id_anggota'];
-    // $jumlah = $this->input->post('jumlah');
-    // $data = array(
-    //   'id_keranjang' => '',
-    //   'id_barang' => $id_barang,
-    //   'id_anggota' => $id_anggota,
-    //   'jumlah' => $jumlah,
-    // );
-    //
-    // $this->store_model->keranjang($data);
-    //
-    // $data['keranjang'] = $this->store_model->tampil_keranjang($id_anggota)->result();
+    $id_anggota = $_SESSION['id_anggota'];
+    $jumlah = $this->input->post('jumlah');
+    $data = array(
+      'id_keranjang' => '',
+      'id_barang' => $id_barang,
+      'id_anggota' => $id_anggota,
+      'jumlah' => $jumlah,
+    );
+
+    //$this->store_model->keranjang($data);
+
+    $data['keranjang'] = $this->store_model->tampil_keranjang($id_anggota)->result();
 
     $this->load->view('landingpage/template/header_store_view',$data);
-    $this->load->view('landingpage/store/cart_view');
+    $this->load->view('landingpage/store/cart_view', $data);
+    $this->load->view('landingpage/template/footer_view');
+  }
+
+  function hapus_cart($id_keranjang)
+  {
+    $id_anggota = $_SESSION['id_anggota'];
+
+    $this->store_model->hapus_keranjang($id_keranjang, $id_anggota);
+
+    $data['keranjang'] = $this->store_model->tampil_keranjang($id_anggota)->result();
+
+    $this->load->view('landingpage/template/header_store_view',$data);
+    $this->load->view('landingpage/store/cart_view', $data);
     $this->load->view('landingpage/template/footer_view');
   }
 

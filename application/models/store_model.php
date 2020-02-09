@@ -72,16 +72,33 @@ class store_model extends CI_Model{
 
   }
 
-  // public function keranjang($data)
-  // {
-  //   $this->db->insert('keranjang', $data);
-  // }
-  //
-  // public function tampil_keranjang($id_anggota)
-  // {
-  //   return $this->db->query("SELECT barang.foto as foto, barang.harga_jual as harga, keranjang.jumlah as jumlah, keranjang.jumlah*barang.harga_jual as total
-  //                   from keranjang join barang on barang.id_barang=keranjang.id_barang where id_anggota = $id_anggota");
-  //
-  // }
+  public function keranjang($data)
+  {
+    $this->db->insert('keranjang', $data);
+  }
+
+  public function tampil_keranjang($id_anggota)
+  {
+    // $this->db->select('barang.foto as foto, barang.harga_jual as harga, keranjang.jumlah as jumlah, keranjang.jumlah*barang.harga_jual as total');
+    // $this->db->from('keranjang');
+    // $this->db->join('barang', 'barang.id_barang = keranjang.id_barang');
+    // // $this->db->join('anggota', 'anggota.id_anggota = keranjang.id_anggota');
+    // $this->db->where('id_anggota', $id_anggota);
+    return $this->db->query("SELECT keranjang.id_keranjang, barang.foto as foto_barang,
+                    barang.kategori, barang.nama_barang as nama, barang.harga_jual as harga, keranjang.jumlah as jumlah,
+                    keranjang.jumlah*barang.harga_jual as total
+                    from keranjang join barang on barang.id_barang=keranjang.id_barang where keranjang.id_anggota = $id_anggota");
+
+  }
+
+  public function hapus_keranjang($id_keranjang, $id_anggota)
+  {
+    $this->db->query("delete from keranjang where id_keranjang=$id_keranjang and id_anggota=$id_anggota");
+  }
+
+  public function banyak_keranjang($id_anggota)
+  {
+    return $this->db->query("SELECT count(id_keranjang) as cart from keranjang where id_anggota=$id_anggota");
+  }
 
 }
