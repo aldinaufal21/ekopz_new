@@ -7,6 +7,7 @@ class Neraca extends CI_Controller{
   {
     parent::__construct();
     $this->load->model('admin/neraca_model');
+    checklogin();
   }
 
   function index()

@@ -1,5 +1,5 @@
 <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form class="login100-form validate-form" method="post" action="<?php echo base_url(); ?>daftar/input">
+				<form class="login100-form validate-form" method="post" action="<?php echo base_url(); ?>Daftar/input_user">
 					<span class="login100-form-title p-b-59">
 						Daftar
 					</span>
@@ -49,7 +49,7 @@
 						</button>
 					</div>
 
-					<a href="<?php echo base_url(); ?>login" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+					<a href="<?php echo base_url(); ?>Login" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
 						Login
 						<i class="fa fa-long-arrow-right m-l-5"></i>
 					</a>

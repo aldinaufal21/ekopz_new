@@ -36,7 +36,7 @@
             <?php
             foreach ($status as $s) : ?>
             <tr>
-              <td><?php echo $s->id_anggota ?></td>
+              <td><?php echo $s->id_pengguna ?></td>
               <td><?php echo $s->id_koperasi ?></td>
               <td><?php echo $s->nama ?></td>
               <td><?php echo $s->jk ?></td>
@@ -45,8 +45,8 @@
               <td><?php echo $s->alamat ?></td>
               <td><?php echo $s->email ?></td>
               <td>
-                <a href="<?php echo base_url(); ?>admin/anggota/edit/<?php echo $s->id_anggota; ?>" class="btn btn-warning">Edit</a>
-                <a href="<?php echo base_url(); ?>admin/anggota/delete/<?php echo $s->id_anggota; ?>" class="btn btn-danger">Delete</a>
+                <a href="<?php echo base_url(); ?>admin/anggota/edit/<?php echo $s->id_pengguna; ?>" class="btn btn-warning">Edit</a>
+                <a href="<?php echo base_url(); ?>admin/anggota/delete/<?php echo $s->id_pengguna; ?>" class="btn btn-danger">Delete</a>
               </td>
             </tr>
           <?php endforeach; ?>

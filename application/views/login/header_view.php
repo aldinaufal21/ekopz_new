@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/login/images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/landingpage/images/logo_ekopz.png"/>
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/login/vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
@@ -30,7 +30,6 @@
 	<!--===============================================================================================-->
 </head>
 <body style="background-color: #999999;">
-
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="login100-more" style="background-image: url('<?php echo base_url(); ?>assets/login/images/bg-01.jpg');"></div>

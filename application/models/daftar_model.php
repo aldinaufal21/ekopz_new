@@ -8,4 +8,8 @@ class daftar_model extends CI_Model{
     $this->db->insert('anggota', $data);
   }
 
+  public function input_koperasi($data)
+  {
+    $this->db->insert('koperasi', $data);
+  }
 }

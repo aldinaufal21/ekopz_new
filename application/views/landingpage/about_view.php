@@ -1,4 +1,4 @@
-<div class="hero-wrap hero-bread" style="background-image: url('<?php echo base_url(); ?>assets/landingpage/images/koperasi.jpg');">
+<div class="hero-wrap hero-bread" style="background-image: url('<?php echo base_url(); ?>assets/landingpage/images/home_1.jpg');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
@@ -12,40 +12,75 @@
     <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(<?php echo base_url(); ?>assets/landingpage/images/about.jpg);">
-						<a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" >
+            <img style="width: 270px;" src="<?php echo base_url(); ?>assets/landingpage/images/logo_ekopz.png" alt="">
 							<span class="icon-play"></span>
 						</a>
 					</div>
 					<div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
 	          <div class="heading-section-bold mb-4 mt-md-5">
 	          	<div class="ml-md-0">
-		            <h2 class="mb-4">Selamat Datang di eKopz website</h2>
+		            <h2 class="mb-4">What's about eKopz</h2>
 	            </div>
 	          </div>
 	          <div class="pb-md-5">
-	          	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-							<p>But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+	          	<p>eKopz adalah sistem yagn dapat mempermudah baik pengurus maupun anggota koperasi dalam berorganisasi yang merupakan solusi bagi permasalahan koperasi diindonesia.</p>
+							<p>Bangga Menggunakan Product Asli Indonesia.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
-      <div class="container py-4">
-        <div class="row d-flex justify-content-center py-5">
-          <div class="col-md-6">
-          	<h2 style="font-size: 22px;" class="mb-0">Subcribe to our Newsletter</h2>
-          	<span>Get e-mail updates about our latest shops and special offers</span>
+    <section class="ftco-section contact-section bg-light">
+      <div class="container">
+      	<div class="row d-flex mb-5 contact-info">
+          <div class="w-100"></div>
+          <div class="col-md-3 d-flex">
+          	<div class="info bg-white p-4">
+	            <p><span>Address:</span> <br> StartupHub CoWorking Lab Gd. Manterawu Lt. 3 R. 304 & R. 305 Faculty of Communications and business JL. Telekomunikasi Jl. Batu Canal, Sukapura, Kec. Dayeuhkolot, Bandung, West Java 40257</p>
+	          </div>
           </div>
-          <div class="col-md-6 d-flex align-items-center">
-            <form action="#" class="subscribe-form">
-              <div class="form-group d-flex">
-                <input type="text" class="form-control" placeholder="Enter email address">
-                <input type="submit" value="Subscribe" class="submit px-3">
+          <div class="col-md-3 d-flex">
+          	<div class="info bg-white p-4">
+	            <p><span>Phone:</span> <a href="tel://1234567920">+628814068380</a></p>
+	          </div>
+          </div>
+          <div class="col-md-3 d-flex">
+          	<div class="info bg-white p-4">
+	            <p><span>Email:</span> <a href="admin@ekopz.com">admin@ekopz.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-3 d-flex">
+          	<div class="info bg-white p-4">
+	            <p><span>Website</span> <a href="#">ekopz.com</a></p>
+	          </div>
+          </div>
+        </div>
+        <div class="row block-9">
+          <div class="col-md-6 order-md-last d-flex">
+            <form action="#" class="bg-white p-5 contact-form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Subject">
+              </div>
+              <div class="form-group">
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
               </div>
             </form>
+
+          </div>
+
+          <div class="col-md-6 d-flex">
+          	<div id="map" class="bg-white"></div>
           </div>
         </div>
       </div>

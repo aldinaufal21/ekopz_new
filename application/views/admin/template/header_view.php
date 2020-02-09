@@ -45,7 +45,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="<?php echo base_url(); ?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>Kop</b></span>
       <!-- logo for regular state and mobile devices -->
@@ -111,17 +111,17 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?php echo base_url(); ?>assets/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Aldy Naufal A</span>
+              <img src="<?php echo base_url(); ?>assets/admin/upload_profile/<?php echo $_SESSION['foto']; ?>" class="user-image" alt="User Image">
+              <span class="hidden-xs"><?php echo $_SESSION['nama_koperasi']; ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="<?php echo base_url(); ?>assets/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="<?php echo base_url(); ?>assets/admin/upload_profile/<?php echo $_SESSION['foto']; ?>" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  <?php echo $_SESSION['nama_koperasi']; ?>
+                  <small>Tahun Berdiri : <?php echo $_SESSION['tahun_berdiri']; ?></small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -145,7 +145,7 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="<?php echo base_url(); ?>login/logout" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="<?php echo base_url(); ?>Login/logout_koperasi" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -165,10 +165,10 @@
       <!-- Sidebar user panel -->
       <div class="user-panel" style="margin-top: 30px;">
         <div class="pull-left image">
-          <img src="<?php echo base_url(); ?>assets/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="<?php echo base_url(); ?>assets/admin/upload_profile/<?php echo $_SESSION['foto']; ?>" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Aldy Naufal A</p>
+          <p><?php echo $_SESSION['nama_koperasi']; ?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div> <br>
@@ -176,7 +176,7 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MENU</li>
         <li <?php if(!empty($dashboard)) echo 'class="active treeview"'; ?>>
-          <a href="<?php echo base_url(); ?>admin/dashboard">
+          <a href="<?php echo base_url(); ?>admin/Dashboard">
             <span>Dashboard</span>
           </a>
         </li>
@@ -186,15 +186,15 @@
           </a>
         </li>
         <li <?php if(!empty($kas)) echo 'class="active treeview"'; ?> >
-          <a href="<?php echo base_url(); ?>admin/kas">
+          <a href="<?php echo base_url(); ?>admin/Kas">
             <span>Buku Kas</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu" data-widget="tree">
-            <li <?php if(!empty($kas_masuk)) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>admin/kas/kas_masuk"><i class="fa fa-circle-o"></i> Rekapitulasi Kas Masuk</a></li>
-            <li <?php if(!empty($kas_keluar)) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>admin/kas/kas_keluar"><i class="fa fa-circle-o"></i> Rekapitulasi Kas Keluar</a></li>
+            <li <?php if(!empty($kas_masuk)) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>admin/Kas/kas_masuk"><i class="fa fa-circle-o"></i> Rekapitulasi Kas Masuk</a></li>
+            <li <?php if(!empty($kas_keluar)) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>admin/Kas/kas_keluar"><i class="fa fa-circle-o"></i> Rekapitulasi Kas Keluar</a></li>
           </ul>
         </li>
         <li <?php if(!empty($simpanpinjam)) echo "class='active treeview'"; ?>>
