@@ -66,7 +66,7 @@
 
 			var locations = [
 				<?php foreach ($maps as $m) { ?>
-					{lat: <?php echo $m->lat; ?>, lng: <?php echo $m->lng; ?>, name: '<?php echo $m->nama; ?>', image:'<?php echo $m->foto; ?>', address:'<?php echo $m->alamat; ?>' },
+					{lat: <?php echo $m->lat; ?>, lng: <?php echo $m->lng; ?>, name: '<?php echo $m->nama; ?>', image:'<?php echo $m->foto; ?>', address:'<?php echo $m->alamat; ?>', id:'<?php echo $m->id_koperasi; ?>' },
 				<?php } ?>
 					// {lat: -6.716737, lng: 107.517748},
 					// {lat: -6.816737, lng: 107.817748}
@@ -74,7 +74,91 @@
 
 		  // The map, centered at Uluru
 		  var mappp = new google.maps.Map(
-		      document.getElementById('map'), {zoom: 10, center: locations[0]});
+		      document.getElementById('map'), {
+						zoom: 10,
+						center: locations[0],
+						styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+
+					});
 		  // The marker, positioned at Uluru
 
 			locations.map(function(item) {
@@ -82,10 +166,12 @@
 
 					html = `
 						<center>
-						<img style="width: 100px;" src="<?php echo base_url(); ?>assets/admin/upload_profile/${item.image}">
-						<div class="h2">${item.name}</div>
-						<p>Koperasi Simpan Pinjam</p>
-						<p>${item.address}</p>
+						<a href="<?php echo base_url(); ?>Koperasi">
+							<img style="width: 100px;" src="<?php echo base_url(); ?>assets/admin/upload_profile/${item.image}">
+							<div class="h2">${item.name}</div>
+							<p>Koperasi Simpan Pinjam</p>
+							<p>${item.address}</p>
+						</a>
 						</center>
 					`;
 

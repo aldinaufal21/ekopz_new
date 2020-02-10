@@ -8,7 +8,7 @@
 							<div class="col-md-12 ftco-animate text-center">
 								<h1 class="mb-2">Maju Bersama Ekopz </h1>
 								<h2 class="subheading mb-4">Majukan koperasi menjadi digitalisasi</h2>
-								<p><a href="#" class="btn btn-primary">View Details</a></p>
+								<p><a href="<?php echo base_url(); ?>About" class="btn btn-primary">View Details</a></p>
 							</div>
 
 						</div>

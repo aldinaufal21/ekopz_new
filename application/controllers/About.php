@@ -11,7 +11,7 @@ class About extends CI_Controller{
 
   function index()
   {
-    $data['nama'] = "About";
+    $data['nama'] = "About Us";
     $data['about'] = TRUE;
     $this->load->view('landingpage/template/header_view', $data);
     $this->load->view('landingpage/about_view');

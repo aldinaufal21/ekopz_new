@@ -2,8 +2,8 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <p class="breadcrumbs" ><span class="mr-2" style="color: green;">eKopz</span></p>
-            <h1 class="mb-0 bread" style="color: green;">About Us</h1>
+            <p class="breadcrumbs" ><span class="mr-2" style="color: #fff;">eKopz</span></p>
+            <h1 class="mb-0 bread" style="color: #fff;">About Us</h1>
           </div>
         </div>
       </div>
